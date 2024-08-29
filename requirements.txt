@@ -1,6 +1,1 @@
-streamlit
-requests
-base64
-PIL
-io
 wikipedia
