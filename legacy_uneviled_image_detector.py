@@ -60,7 +60,7 @@ if img_data:
                 except wikipedia.exceptions.PageError:
                     st.write("No Wikipedia page found for the identified item.")
             else:
-                st.write("The API did not return a valid identification.")
+                st.write("This was  not an art or famous place or mounment or temple. thank u for using this")
         else:
             st.write("Failed to get a response from the API.")
             st.write(f"Status Code: {response.status_code}")
