@@ -53,15 +53,17 @@ if img_data:
 
             # Extract the 'result' value from the response
             result_value = result['result']
-
+            if "none" not in result_value.lower() :
             # Display summary from Wikipedia based on the result value
-            try:
-                summary = wikipedia.summary(result_value)
-                st.write(summary)
-            except wikipedia.exceptions.DisambiguationError as e:
-                st.write("NOT FOUND")
-                st.write(e.options)
-            except wikipedia.exceptions.PageError:
+                try:
+                    summary = wikipedia.summary(result_value)
+                    st.write(summary)
+                except wikipedia.exceptions.DisambiguationError as e:
+                    st.write("NOT FOUND")
+                    st.write(e.options)
+                except wikipedia.exceptions.PageError:
+                    st.write("NOT FOUND")
+            else:
                 st.write("NOT FOUND")
         else:
             st.write("Failed to get a response from the API.")
