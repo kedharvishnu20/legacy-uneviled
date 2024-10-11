@@ -6,7 +6,7 @@ from io import BytesIO
 import wikipedia
 
 # Streamlit App Title
-st.title("LEGACY UNEVILED")
+st.title("LEGACY UNEVILED ")
 
 # Camera input
 img_data = st.camera_input("Take a picture")
